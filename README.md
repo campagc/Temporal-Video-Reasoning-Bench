@@ -67,6 +67,7 @@ Here is a summary of the Python scripts located in the `scripts/` directory:
 **`run_native_repeated.py`**: The core inference engine using **Qwen2.5-VL**. It loads a subset of clips (controlled by `NUM_CLIPS`), shuffles them, and asks the model to reconstruct the chronological timeline. This process is repeated `NUM_RUNS` times.
 
 **`evaluate_metrics_dual.py`**: Benchmarks the model's output by comparing it against the Ground Truth. It calculates DAG-based metrics (checking if logical dependencies from the Task Graph are respected) and Exact Match metrics. It also simulates 200 random runs to provide a baseline comparison.
+
 ---
 
 ## 🛠 Requirements
