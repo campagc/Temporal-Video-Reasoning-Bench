@@ -1,0 +1,20 @@
+# --- DATI PESANTI (Ignora tutto qui dentro) ---
+data/
+output/
+
+# --- AMBIENTI VIRTUALI ---
+env/
+venv/
+.conda/
+__pycache__/
+*.pyc
+
+# --- FILE TEMPORANEI ---
+.DS_Store
+selected_id.txt
+video_to_download.txt
+
+# --- CARTELLE GIT SCARICATE (Le riscaricherai se serve) ---
+# Ignoriamo le repo esterne per tenere il tuo git pulito
+scripts/downloader_repo/
+data/annotations_repo/
