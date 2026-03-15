@@ -1,0 +1,6 @@
+project:
+  max_side: 768
+  default_num_frames: 8
+  dataset_root: "data"
+  models_dir: "data/models"
+  logs_dir: "logs"

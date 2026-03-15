@@ -1,0 +1,38 @@
+# --- DATI PESANTI (Ignora tutto qui dentro) ---
+data/
+logs/
+output/
+output_grid_experiment_com/
+output_grid_experiment_captaincook/
+output_grid_internvl_captaincook/
+output_grid_internvl_com/
+output_altri/
+
+
+# --- AMBIENTI VIRTUALI ---
+env/
+venv/
+.conda/
+__pycache__/
+*.pyc
+
+# --- FILE TEMPORANEI ---
+.DS_Store
+selected_id.txt
+video_to_download.txt
+
+# --- CARTELLE GIT SCARICATE (Le riscaricherai se serve) ---
+# Ignoriamo le repo esterne per tenere il tuo git pulito
+scripts/downloader_repo/
+data/annotations_repo/
+scripts/__pycache__
+scripts/versioni_precedenti
+
+# Estensioni specifiche pesanti
+*.whl
+*.pt
+*.pth
+*.bin
+*.mp4
+*.zip
+*.tar.gz
