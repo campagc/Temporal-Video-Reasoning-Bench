@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Topological evaluation of Causal and Temporal Reasoning in Large Vision-Language Models.">
-  <meta name="keywords" content="Temporal Reasoning, Vision-Language Models, Task Graphs, Directed Acyclic Graphs, Zero-shot Evaluation">
+    content="Topological evaluation of Causal and Temporal Reasoning in Large Vision-Language Models.">
+  <meta name="keywords"
+    content="Temporal Reasoning, Vision-Language Models, Task Graphs, Directed Acyclic Graphs, Zero-shot Evaluation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Topological Evaluation of Causal and Temporal Reasoning in LVLMs</title>
 
@@ -18,246 +20,247 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
 </head>
+
 <body>
 
-<section class="hero">
-  <div class="hero-body">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Topological Evaluation of Causal and Temporal Reasoning in Large
+              Vision-Language Models</h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://github.com/campagc">Giuliano Campagnolo</a>,
+              </span>
+              <span class="author-block">
+                <b>Supervisors:</b> Elisa Ricci, Benedetta Libertadori, Paolo Rota
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Bachelor's Thesis (2026) | University of Trento</span><br>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/campagc/video-reasoning-project"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- TODO: Add Report Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/campagc/video-reasoning-project"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Report (TODO)</span>
+                  </a>
+                </span>
+                <!-- TODO: Add Slides Link. -->
+                <span class="link-block">
+                  <a href="https://campagc.github.io/Temporal-Video-Reasoning-Bench/static/files/TESI%20-%20TESI.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Slides (IT)</span>
+                  </a>
+                </span>
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://campagc.github.io/Temporal-Video-Reasoning-Bench/static/files//ELABORATO_Giuliano_Campagnolo.pdf"
+                    class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Thesis (IT)</span>
+                  </a>
+                </span>
+                <!-- -- -- -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Teaser Placeholder -->
+      <!--<div class="box has-background-light has-text-centered mb-6" style="border: 2px dashed #ccc; padding: 5px;">-->
+      <div class="column has-text-centered">
+        <img src="./static/images/teaser_progetto.png" alt="Teaser Image" style="max-width: 80%; height: auto;">
+      </div>
+      <!--</div>-->
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Evaluating temporal and causal reasoning in modern Large Vision-Language Models (LVLMs) often clashes with
+              the limitations of current benchmarks. In the <strong>"Shuffle and Reorder"</strong> temporal test,
+              standard evaluation assumes a single correct sequence, imposing a strictly linear Ground Truth. However,
+              in real-world procedural activities (like cooking), multiple sub-sequences are logically commutative or
+              entirely independent. Evaluating a model by demanding a perfect positional match unjustly penalizes its
+              true intelligence, classifying logically valid procedural variants as failures.
+            </p>
+            <p>
+              To overcome this, we introduce a zero-shot evaluation framework based on <strong>Task Graphs</strong>,
+              formalized as Directed Acyclic Graphs (DAGs). We abandon positional distance metrics in favor of
+              topological measurements—specifically <strong>Closure Accuracy</strong> and <strong>Reduction
+                Accuracy</strong>. This approach successfully disentangles the arbitrary order of execution from the
+              intrinsic order of causal dependency.
+            </p>
+            <p>
+              Evaluations on the <em>CaptainCook4D</em> and <em>COMKITCHENS</em> datasets against a Monte Carlo
+              simulated Random Baseline reveal a stark architectural divide between state-of-the-art models. While some
+              models demonstrate solid deductive capabilities, others struggle to surpass random chance, relying on
+              visual biases rather than true causal understanding.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Topological Evaluation of Causal and Temporal Reasoning in Large Vision-Language Models</h1>
-          
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://github.com/campagc">Giuliano Campagnolo</a>,
-            </span>
-            <span class="author-block">
-              <b>Supervisors:</b> Elisa Ricci, Benedetta Libertadori, Paolo Rota
-            </span>
+        <div class="column is-full-width">
+          <h2 class="title is-3">Methodology: Topological Evaluation</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              Real-world procedures are non-linear. By modeling activities as a <strong>Directed Acyclic Graph
+                (DAG)</strong>, where nodes are video clips and directed edges denote strict temporal dependencies, we
+              validate any topological sort of the graph.
+            </p>
+            <ul>
+              <li><strong>Closure Accuracy:</strong> Measures the percentage of total dependency relations (direct and
+                indirect) correctly respected by the predicted sequence.</li>
+              <li><strong>Reduction Accuracy:</strong> Focuses strictly on the immediate, essential dependencies without
+                redundant transitive edges.</li>
+              <li><strong>Monte Carlo Random Baseline:</strong> While the theoretical expected value for Closure
+                Accuracy is 50%, we employ a Monte Carlo baseline to provide a standardized empirical distribution
+                useful also for other tests.</li>
+            </ul>
+          </div>
+          <div class="column has-text-centered">
+            <img src="./static/images/reductions_f.png" alt="Transitive vs Closure Reduction"
+              style="max-width: 100%; height: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Key Findings</h2>
+      <div class="content has-text-justified">
+        <strong>NOTE: </strong> To accommodate context window limitations, we use a variant where the model evaluates a
+        randomly sampled subset of clips rather than the full procedural sequence.
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h3 class="title is-4">1. The Architectural Divide</h3>
+          <div class="content has-text-justified">
+            <p>
+              We tested <strong>InternVL3.5-8B</strong> and <strong>Qwen2.5-VL-7B-Instruct</strong>. A severe gap in
+              reasoning capabilities emerged. InternVL3.5-8B showcased robust deductive abilities, maintaining a
+              systematic advantage over the random baseline even in complex 9-clip sequences. Conversely, Qwen2.5-VL
+              struggled, experiencing context window saturation and performing statistically worse than a random shuffle
+              on longer sequences.
+            </p>
+          </div>
+          <div class="column has-text-centered">
+            <img src="./static/images/OVERALL_plot_models_delta_bar.png" alt="Results Graph"
+              style="max-width: 70%; height: auto;">
+          </div>
+          <h3 class="title is-4">2. The Visual Density Paradox</h3>
+          <div class="content has-text-justified">
+            <p>
+              Does sampling more frames per action improve understanding? No. Increasing the sampled frames per clip
+              from 2 to 8 yielded zero tangible improvement. This suggest that the true bottleneck for current LVLMs in
+              this task is not instantaneous visual perception, but rather the logical re-elaboration of connections
+              across the temporal context.
+            </p>
+          </div>
+          <div class="column has-text-centered">
+            <div class="columns is-centered">
+              <div class="column">
+                <img src="./static/images/plot_CAPInternVL_absolute_by_frames.png" alt="Results Graph"
+                  style="max-width: 80%; height: auto;">
+              </div>
+
+              <div class="column">
+                <img src="./static/images/plot_COMInternVL_absolute_by_frames.png" alt="Results Graph"
+                  style="max-width: 80%; height: auto;">
+              </div>
+            </div>
           </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">Bachelor's Thesis (2026) | University of Trento</span><br>
+          <h3 class="title is-4">3. Dependence on Visual Biases</h3>
+          <div class="content has-text-justified">
+            <p>
+              A qualitative analysis categorized tasks into <em>High Visual Change</em> (clear, irreversible state
+              transformations) and <em>Low Visual Change</em> (minimal or ambiguous visual variations). The models seems
+              to be dependent on visual biases: they excel when the state of matter clearly changes (e.g., whole tomato
+              to sliced tomato) but fail at deducing causal flow when visual anchors are missing.
+              Note that this categorization was performed by a single annotator, which limits considerably its
+              scientific rigor and serves primarily as a qualitative suggestion.
+            </p>
           </div>
 
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/campagc/video-reasoning-project"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- TODO: Add Report Link. -->
-              <span class="link-block">
-                <a href="https://github.com/campagc/video-reasoning-project"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Report (TODO)</span>
-                </a>
-              </span>
-              <!-- TODO: Add Slides Link. -->
-              <span class="link-block">
-                <a href="https://campagc.github.io/Temporal-Video-Reasoning-Bench/static/files/TESI%20-%20TESI.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Slides</span>
-                </a>
-              </span>
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="ELABORATO_Giuliano_Campagnolo.pdf"
-                   class="external-link button is-normal is-rounded is-dark" target="_blank">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Thesis (IT)</span>
-                </a>
-              </span>
-              <!-- -- -- -->
-            </div>
+            <img src="./static/images/delta_trend_comparison_6F_Intern.png" alt="Visual Change Trend"
+              style="max-width: 70%; height: auto;">
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Teaser Placeholder -->
-    <div class="box has-background-light has-text-centered mb-6" style="border: 2px dashed #ccc; padding: 40px;">
-      <h3 class="title is-5 has-text-grey">Placeholder: Teaser image</h3>
-      <p class="has-text-grey">
-        //
-      </p>
-    </div>
 
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Evaluating temporal and causal reasoning in modern Large Vision-Language Models (LVLMs) often clashes with the limitations of current benchmarks. In the <strong>"Shuffle and Reorder"</strong> temporal test, standard evaluation assumes a single correct sequence, imposing a strictly linear Ground Truth. However, in real-world procedural activities (like cooking), multiple sub-sequences are logically commutative or entirely independent. Evaluating a model by demanding a perfect positional match unjustly penalizes its true intelligence, classifying logically valid procedural variants as failures.
-          </p>
-          <p>
-            To overcome this, we introduce a zero-shot evaluation framework based on <strong>Task Graphs</strong>, formalized as Directed Acyclic Graphs (DAGs). We abandon positional distance metrics in favor of topological measurements—specifically <strong>Closure Accuracy</strong> and <strong>Reduction Accuracy</strong>. This approach successfully disentangles the arbitrary order of execution from the intrinsic order of causal dependency.
-          </p>
-          <p>
-            Evaluations on the <em>CaptainCook4D</em> and <em>COMKITCHENS</em> datasets against a Monte Carlo simulated Random Baseline reveal a stark architectural divide between state-of-the-art models. While some models demonstrate solid deductive capabilities, others struggle to surpass random chance, relying on visual biases rather than true causal understanding.
-          </p>
-        </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="ELABORATO_Giuliano_Campagnolo.pdf" target="_blank">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/campagc/video-reasoning-project">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
-    </div>
-    <!--/ Abstract. -->
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Methodology: Topological Evaluation</h2>
-        
-        <div class="content has-text-justified">
-          <p>
-            Real-world procedures are non-linear. By modeling activities as a <strong>Directed Acyclic Graph (DAG)</strong>, where nodes are video clips and directed edges denote strict temporal dependencies, we validate any topological sort of the graph.
-          </p>
-          <ul>
-            <li><strong>Closure Accuracy:</strong> Measures the percentage of total dependency relations (direct and indirect) correctly respected by the predicted sequence.</li>
-            <li><strong>Reduction Accuracy:</strong> Focuses strictly on the immediate, essential dependencies without redundant transitive edges.</li>
-            <li><strong>Monte Carlo Random Baseline:</strong> While the theoretical expected value for Closure Accuracy is 50%, we employ a Monte Carlo baseline to provide a standardized empirical distribution useful also for other tests.</li>
-          </ul>
-        </div>
-
-        <img src="./static/images/reductions_f.png" alt="Transitive vs Closure Reduction">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3">Key Findings</h2>
-    <div class="content has-text-justified">
-    <strong>NOTE: </strong> To accommodate context window limitations, we use a variant where the model evaluates a randomly sampled subset of clips rather than the full procedural sequence.
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h3 class="title is-4">1. The Architectural Divide</h3>
-        <div class="content has-text-justified">
-          <p>
-            We tested <strong>InternVL3.5-8B</strong> and <strong>Qwen2.5-VL-7B-Instruct</strong>. A severe gap in reasoning capabilities emerged. InternVL3.5-8B showcased robust deductive abilities, maintaining a systematic advantage over the random baseline even in complex 9-clip sequences. Conversely, Qwen2.5-VL struggled, experiencing context window saturation and performing statistically worse than a random shuffle on longer sequences.
-          </p>
-        </div>
-        <div class="column has-text-centered">
-        <img src="./static/images/OVERALL_plot_models_delta_bar.png" alt="Results Graph" style="max-width: 80%; height: auto;">
-        </div>
-        <h3 class="title is-4">2. The Visual Density Paradox</h3>
-        <div class="content has-text-justified">
-          <p>
-            Does sampling more frames per action improve understanding? No. Increasing the sampled frames per clip from 2 to 8 yielded zero tangible improvement. This suggest that the true bottleneck for current LVLMs in this task is not instantaneous visual perception, but rather the logical re-elaboration of connections across the temporal context.
-          </p>
-        </div>
-        <div class="column has-text-centered">
-        <div class="columns is-centered">
-                <div class="column">
-                    <img src="./static/images/plot_CAPInternVL_absolute_by_frames.png" alt="Results Graph" style="max-width: 80%; height: auto;">
-                </div>
-
-                <div class="column">
-                    <img src="./static/images/plot_COMInternVL_absolute_by_frames.png" alt="Results Graph" style="max-width: 80%; height: auto;">
-                </div>
-            </div>
-        </div>
-
-        <h3 class="title is-4">3. Dependence on Visual Biases</h3>
-        <div class="content has-text-justified">
-          <p>
-            A qualitative analysis categorized tasks into <em>High Visual Change</em> (clear, irreversible state transformations) and <em>Low Visual Change</em> (minimal or ambiguous visual variations). The models seems to be dependent on visual biases: they excel when the state of matter clearly changes (e.g., whole tomato to sliced tomato) but fail at deducing causal flow when visual anchors are missing.
-            Note that this categorization was performed by a single annotator, which limits considerably its scientific rigor and serves primarily as a qualitative suggestion.
-          </p>
-        </div>
-
-        <div class="column has-text-centered">
-          <img src="./static/images/delta_trend_comparison_6F_Intern.png" alt="Visual Change Trend" style="max-width: 70%; height: auto;">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3">Qualitative Examples</h2>
-    <div class="columns is-centered">
-      
-      <!-- Success Case -->
-      <div class="column">
-        <div class="content">
-          <h3 class="title is-4">✅ Success: Tomato Mozzarella Salad</h3>
-          <p>
-            Characterized by clear, progressive state transformations. The model acts as a perfect <em>State Tracker</em>, utilizing unmistakable visual anchors (washing whole tomatoes $\rightarrow$ slicing tomatoes) to deduce the correct causal development.
-          </p>
-          <div class="box has-background-light has-text-centered" style="border: 2px dashed #ccc; padding: 20px;">
-            <p class="has-text-grey">
-              <strong>TODO</strong> Can't use CaptainCook4D
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies
+                template</a>.
+              The source code of this website is available on <a
+                href="https://github.com/campagc/video-reasoning-project">GitHub</a>.
             </p>
           </div>
         </div>
       </div>
-
-      <!-- Failure Case -->
-      <div class="column">
-        <h3 class="title is-4">❌ Failure: Microwave Mug Pizza</h3>
-        <div class="content">
-          <p>
-            Characterized by repetitive actions within opaque containers. Deprived of clear visual state changes (powder to dough is hidden inside the mug), the model hallucinates generic textual logic templates ("prepare first, then microwave") failing entirely to track the physical state.
-          </p>
-          <div class="box has-background-light has-text-centered" style="border: 2px dashed #ccc; padding: 20px;">
-            <p class="has-text-grey">
-              <strong>TODO</strong> Can't use CaptainCook4D
-            </p>
-          </div>
-        </div>
-      </div>
-      
     </div>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link" href="ELABORATO_Giuliano_Campagnolo.pdf" target="_blank">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/campagc/video-reasoning-project">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies template</a>. 
-            The source code of this website is available on <a href="https://github.com/campagc/video-reasoning-project">GitHub</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
