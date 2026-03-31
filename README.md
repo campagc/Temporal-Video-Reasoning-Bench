@@ -8,7 +8,7 @@
 
 [Giuliano Campagnolo](https://github.com/campagc), <b>Supervisors</b>: Elisa Ricci, Benedetta Libertadori, Paolo Rota<br>
 
-<img src="teaser_progetto.png" alt="Paper" width="1000">
+<img src="teaser_progetto.png" alt="Paper" width="800">
 <div align="left">
 
 > **Abstract:** Evaluating temporal and causal reasoning in modern Large Vision-Language Models (LVLMs) often clashes with the limitations of current benchmarks. In the "Shuffle and Reorder" temporal test, standard evaluation assumes a single correct sequence, imposing a strictly linear Ground Truth. However, in real-world procedural activities (like cooking), multiple sub-sequences are logically commutative or entirely independent. Evaluating a model by demanding a perfect positional match unjustly penalizes its true intelligence, classifying logically valid procedural variants as failures.
