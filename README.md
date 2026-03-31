@@ -1,3 +1,22 @@
+<div align="center">
+
+[![Paper](https://img.shields.io/badge/Paper-Technical_Report-B31B1B.svg?logo=adobe-acrobat-reader&logoColor=white)](https://campagc.github.io/Temporal-Video-Reasoning-Bench/static/files/TechReport_TopologicalEvaluation.pdf)
+[![Project Website](https://img.shields.io/badge/Project-Website-blue?logo=google-chrome&logoColor=white)](https://campagc.github.io/Temporal-Video-Reasoning-Bench/)
+
+
+# Topological Evaluation of Causal and Temporal Reasoning in Large Vision-Language Models
+
+[Giuliano Campagnolo](https://github.com/campagc), <b>Supervisors</b>: Elisa Ricci, Benedetta Libertadori, Paolo Rota<br>
+
+<img src="media/teaser.png" alt="Paper" width="1200">
+<div align="left">
+
+> **Abstract:** Evaluating temporal and causal reasoning in modern Large Vision-Language Models (LVLMs) often clashes with the limitations of current benchmarks. In the "Shuffle and Reorder" temporal test, standard evaluation assumes a single correct sequence, imposing a strictly linear Ground Truth. However, in real-world procedural activities (like cooking), multiple sub-sequences are logically commutative or entirely independent. Evaluating a model by demanding a perfect positional match unjustly penalizes its true intelligence, classifying logically valid procedural variants as failures.
+To overcome this, we introduce a zero-shot evaluation framework based on Task Graphs, formalized as Directed Acyclic Graphs (DAGs). We abandon positional distance metrics in favor of topological measurements—specifically Closure Accuracy and Reduction Accuracy. This approach successfully disentangles the arbitrary order of execution from the intrinsic order of causal dependency.
+Evaluations on the CaptainCook4D and COMKITCHENS datasets against a Monte Carlo simulated Random Baseline reveal a stark architectural divide between state-of-the-art models. While some models demonstrate solid deductive capabilities, others struggle to surpass random chance, relying on visual biases rather than true causal understanding.
+
+
+
 # Video Reasoning Research Project
 
 This repository contains the code, evaluation scripts, and visualization tools for a video reasoning research project evaluating Large Vision-Language Models (such as InternVL and Qwen) on complex, multi-step video tasks. The pipeline includes downloading videos, extracting frames, running model inferences in a grid-search manner, and generating detailed analytical visualizations.
